@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 in 1 Electric Spray Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ddd;
+        }
+        .description {
+            line-height: 1.6;
+            color: #555;
+        }
+        .specifications-list, .key-features-list, .material-list, .dimensions-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .specifications-list li, .key-features-list li, .material-list li, .dimensions-list li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .specifications-list li:before, .key-features-list li:before, .material-list li:before, .dimensions-list li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .color-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .color-option {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ddd;
+        }
+        .color-option.green { background-color: #2ecc71; }
+        .color-option.red { background-color: #e74c3c; }
+        .color-option.blue { background-color: #3498db; }
+        .color-option.active { border-color: #333; }
+    </style>
+</head>
+<body>
+    <h1 class="product-title">3 in 1 Electric Spray Tool</h1>
+    
+    <div class="section">
+        <h2 class="section-title">Description</h2>
+        <p class="description">
+            Whether you usually use round, triangular or square markers, simply insert the spray bottle! 
+            Instantly transform into a <span class="bold">"creative spray gun"</span> to spray gradient colors, 
+            textures, special patterns... One spray bottle unlocks N new ways to play with markers, 
+            illustrations/hand painting/DIY! Align the buckle, install the nozzle, start with one button 
+            and long press to spray continuously, with uniform ink and smooth spray, to become a painting master!
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Specifications</h2>
+        <ul class="specifications-list">
+            <li>Oil-based markers for square, round and triangular tips</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Key Features</h2>
+        <ul class="key-features-list">
+            <li><span class="bold">Product Type:</span> Electric Airbrush</li>
+            <li><span class="bold">Color:</span> Green, Red, Blue</li>
+            <li><span class="bold">Package Contents:</span> Electric Airbrush, Marker Nozzles*3, USB Charging Cable, Instruction Manual</li>
+        </ul>
+        
+        <!-- 新增颜色选择器 -->
+        <div class="color-options">
+            <div class="color-option green active" onclick="selectColor('green')"></div>
+            <div class="color-option red" onclick="selectColor('red')"></div>
+            <div class="color-option blue" onclick="selectColor('blue')"></div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Material Details</h2>
+        <ul class="material-list">
+            <li><span class="bold">Material:</span> ABS, Silicone, Electronic Components</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">Dimensions</h2>
+        <ul class="dimensions-list">
+            <li><span class="bold">Length:</span> 8.2cm</li>
+            <li><span class="bold">Width:</span> 5cm</li>
+            <li><span class="bold">Thickness:</span> 14.5cm</li>
+        </ul>
+    </div>
+    
+    <script>
+        // 颜色选择功能
+        function selectColor(color) {
+            const colorOptions = document.querySelectorAll('.color-option');
+            colorOptions.forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`.color-option.${color}`).classList.add('active');
+            
+            // 这里可以添加切换产品图片颜色的逻辑
+            console.log(`Selected color: ${color}`);
+        }
+    </script>
+</body>
+</html>    
